@@ -26,16 +26,17 @@ public class BulletMove : MonoBehaviour
             Destroy(gameObject);
         };
 
-        if (Input.GetKeyDown(KeyCode.Space)) { ScaleBullet(); };
+        //if (Input.GetKeyDown(KeyCode.Space)) { ScaleBullet(); };
     }
     void MoveBullet(Vector3 direction)
     {
         transform.Translate(direction * bulletSpeed * Time.deltaTime);
     
     }
-    void ScaleBullet()
+}
+    /*void ScaleBullet()
     {
         transform.localScale = new Vector3(2f, 2f, 2f);
 
     }
-}
+}*/

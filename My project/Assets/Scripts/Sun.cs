@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Follow : MonoBehaviour
+public class Sun : MonoBehaviour
 {
-    [SerializeField] GameObject playerSeepoint;
+
+    [SerializeField] float rotationSpeed = 10;
     
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +18,7 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       transform.Rotate(Vector3.left * rotationSpeed * Time.deltaTime); 
     }
-
-    private void LateUpdate() {
-        
-        transform.position = playerSeepoint.transform.position;
-    }
+    
 }
